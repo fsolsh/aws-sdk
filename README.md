@@ -52,5 +52,5 @@ String fileUrl = aws_s3.putObjectWithPublicRead("bucketName", "objectKey",new Ha
 //2、发送邮件
 boolean isSend = aws_ses.sendTextMail("f@qq.com", "s@qq.com", "subject", "bodyText");
 //3、发送短信
-boolean isSend = aws_sns.sendTextSMS("message", "8615900774595");
+boolean isSend = aws_sns.sendTextSMS("message", "+8615900770077");
 ```
