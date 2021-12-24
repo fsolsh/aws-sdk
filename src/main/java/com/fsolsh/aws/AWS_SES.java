@@ -58,7 +58,7 @@ public class AWS_SES {
 
     public boolean sendHtmlMailWithAttachment(String sender, String recipient, String subject, String bodyHTML, String attachmentName, FileType fileType, byte[] attachment) throws IOException, MessagingException {
         if (!isReady) {
-            log.error("sendHtmlMail error, aws-ses initialization failed, to : {}", recipient);
+            log.error("sendHtmlMailWithAttachment error, aws-ses initialization failed, to : {}", recipient);
             throw new RuntimeException(" aws-ses initialization failed");
         }
         SesClient client = SesClient.builder().region(region).build();
@@ -88,7 +88,7 @@ public class AWS_SES {
 
     public boolean sendTextMailWithAttachment(String sender, String recipient, String subject, String bodyText, String attachmentName, FileType fileType, byte[] attachment) throws IOException, MessagingException {
         if (!isReady) {
-            log.error("sendHtmlMail error, aws-ses initialization failed, to : {}", recipient);
+            log.error("sendTextMailWithAttachment error, aws-ses initialization failed, to : {}", recipient);
             throw new RuntimeException(" aws-ses initialization failed");
         }
         SesClient client = SesClient.builder().region(region).build();
